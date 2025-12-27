@@ -58,21 +58,23 @@ export default function Login() {
           <h1 className="text-3xl font-bold text-text mb-2">
             BloodBridge Nepal
           </h1>
-          <p className="text-text-secondary">Secure System Access</p>
+          <p className="text-text-secondary">Secure System Access By Sanish</p>
         </div>
 
         {error && (
           <div
-            className={`mb-6 p-4 border rounded-lg ${error.includes("blocked")
+            className={`mb-6 p-4 border rounded-lg ${
+              error.includes("blocked")
                 ? "bg-amber-50 border-amber-500"
                 : "bg-red-50 border-primary-red"
-              }`}
+            }`}
           >
             <p
-              className={`text-sm font-medium ${error.includes("blocked")
+              className={`text-sm font-medium ${
+                error.includes("blocked")
                   ? "text-amber-700"
                   : "text-primary-red"
-                }`}
+              }`}
             >
               {error}
             </p>
