@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import API_BASE_URL from "../api";
 
 const bloodGroups = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
 
@@ -29,8 +30,8 @@ export default function DonorForm({ onSubmitted }) {
     try {
       const url =
         role === "donor"
-          ? "http://localhost:4000/api/donors"
-          : "http://localhost:4000/api/requests";
+          ? `${API_BASE_URL}/api/donors`
+          : `${API_BASE_URL}/api/requests`;
       const payload = { ...form };
       if (role === "recipient") payload.available = 0;
       const res = await fetch(url, {

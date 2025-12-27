@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import API_BASE_URL from "../api";
 
 export default function DonorList() {
   const [donors, setDonors] = useState([]);
 
   async function load() {
     try {
-      const r = await fetch("http://localhost:4000/api/donors");
+      const r = await fetch(`${API_BASE_URL}/api/donors`);
       const data = await r.json();
       setDonors(data);
     } catch (err) {

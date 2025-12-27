@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import API_BASE_URL from "../api";
 
 export default function RequestsList() {
   const [requests, setRequests] = useState([]);
 
   async function load() {
     try {
-      const r = await fetch("http://localhost:4000/api/requests");
+      const r = await fetch(`${API_BASE_URL}/api/requests`);
       const data = await r.json();
       setRequests(data);
     } catch (err) {
