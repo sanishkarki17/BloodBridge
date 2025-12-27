@@ -36,3 +36,4 @@ Next steps I can help with:
 
 - Connect your MySQL Workbench to the running DB and import `db/schema.sql`.
 - Add auth, admin UI, donor signup form, and search/filter by district/blood group.
+# BloodBridge
